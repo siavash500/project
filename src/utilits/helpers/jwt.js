@@ -11,3 +11,15 @@ export const encryptJWT=async(payload)=>{
     .setExpirationTime("1day")
     .sign(key);
 }
+
+
+export const decryptJWT = async (session) => {
+  try {
+    const { payload } = await jwtVerify(session, key, {
+      algorithms: ["HS256"],
+    });
+    return payload; 
+  } catch (error) {
+    return null;
+  }
+};
