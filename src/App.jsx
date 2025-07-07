@@ -13,7 +13,7 @@ const App =  () => {
 
     //     createCooki();
 
-    // },[]);
+    // },[]); // so i create the cooki 
 
          const readCookie= async () => {
             const result = await getCookie("credential");
@@ -21,7 +21,7 @@ const App =  () => {
         };
 
         readCookie();
-    },[]);
+    },[]); // so i get the Cooki and clg them
 
 
     return (
